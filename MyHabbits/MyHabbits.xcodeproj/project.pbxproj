@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8D6D2A268C796400D43423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D6D29268C796400D43423 /* Assets.xcassets */; };
 		0D8FED162683772900915363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED152683772900915363 /* AppDelegate.swift */; };
 		0D8FED182683772900915363 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED172683772900915363 /* SceneDelegate.swift */; };
-		0D8FED1A2683772900915363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED192683772900915363 /* ViewController.swift */; };
+		0D8FED1A2683772900915363 /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED192683772900915363 /* HabitsViewController.swift */; };
 		0D8FED1D2683772900915363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8FED1B2683772900915363 /* Main.storyboard */; };
-		0D8FED1F2683773300915363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8FED1E2683773300915363 /* Assets.xcassets */; };
 		0D8FED222683773300915363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8FED202683773300915363 /* LaunchScreen.storyboard */; };
+		0D8FED392683872A00915363 /* HabitsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED382683872A00915363 /* HabitsStore.swift */; };
+		0D8FED3D2683891200915363 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED3C2683891200915363 /* HabitViewController.swift */; };
+		0D8FED412683892100915363 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8FED402683892100915363 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D8D6D29268C796400D43423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/MyHabits-main/MyHabits/Assets.xcassets"; sourceTree = "<group>"; };
 		0D8FED122683772900915363 /* MyHabbits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHabbits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8FED152683772900915363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D8FED172683772900915363 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0D8FED192683772900915363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D8FED192683772900915363 /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
 		0D8FED1C2683772900915363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0D8FED1E2683773300915363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D8FED212683773300915363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D8FED232683773300915363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D8FED382683872A00915363 /* HabitsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HabitsStore.swift; path = "../../../../Downloads/iosui-diplom-main/HabitsStore.swift"; sourceTree = "<group>"; };
+		0D8FED3C2683891200915363 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
+		0D8FED402683892100915363 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +64,13 @@
 			children = (
 				0D8FED152683772900915363 /* AppDelegate.swift */,
 				0D8FED172683772900915363 /* SceneDelegate.swift */,
-				0D8FED192683772900915363 /* ViewController.swift */,
+				0D8FED192683772900915363 /* HabitsViewController.swift */,
+				0D8FED3C2683891200915363 /* HabitViewController.swift */,
+				0D8FED402683892100915363 /* InfoViewController.swift */,
+				0D8FED382683872A00915363 /* HabitsStore.swift */,
 				0D8FED1B2683772900915363 /* Main.storyboard */,
-				0D8FED1E2683773300915363 /* Assets.xcassets */,
 				0D8FED202683773300915363 /* LaunchScreen.storyboard */,
+				0D8D6D29268C796400D43423 /* Assets.xcassets */,
 				0D8FED232683773300915363 /* Info.plist */,
 			);
 			path = MyHabbits;
@@ -125,7 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8FED222683773300915363 /* LaunchScreen.storyboard in Resources */,
-				0D8FED1F2683773300915363 /* Assets.xcassets in Resources */,
+				0D8D6D2A268C796400D43423 /* Assets.xcassets in Resources */,
 				0D8FED1D2683772900915363 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D8FED1A2683772900915363 /* ViewController.swift in Sources */,
+				0D8FED392683872A00915363 /* HabitsStore.swift in Sources */,
+				0D8FED1A2683772900915363 /* HabitsViewController.swift in Sources */,
 				0D8FED162683772900915363 /* AppDelegate.swift in Sources */,
+				0D8FED3D2683891200915363 /* HabitViewController.swift in Sources */,
+				0D8FED412683892100915363 /* InfoViewController.swift in Sources */,
 				0D8FED182683772900915363 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
