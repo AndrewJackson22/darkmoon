@@ -57,14 +57,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="kdq-QC-9YF">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Xiw-bZ-ykQ">
-                            <color key="tintColor" name="Purple Color"/>
-                            <connections>
-                                <segue destination="G0F-3b-FMs" kind="show" id="BRU-86-voG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="kdq-QC-9YF"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lX-a4-7Ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +100,7 @@
         <!--Habit View Controller-->
         <scene sceneID="Gl9-Nt-EYH">
             <objects>
-                <viewController id="G0F-3b-FMs" customClass="HabitViewController" customModule="MyHabbits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="habitVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G0F-3b-FMs" customClass="HabitViewController" customModule="MyHabbits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mz8-g6-ofN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,9 +118,6 @@
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.split.1x2.fill" catalog="system" width="128" height="93"/>
         <namedColor name="Purple">
-            <color red="0.63137254901960782" green="0.086274509803921567" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Purple Color">
             <color red="0.63137254901960782" green="0.086274509803921567" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

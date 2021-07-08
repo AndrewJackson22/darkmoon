@@ -39,7 +39,7 @@ class HabitViewCollection: UICollectionViewCell {
     private let habitTimeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        label.textColor = .systemGray2
+        label.textColor = .black
         label.toAutoLayout()
         return label
     }()
@@ -47,7 +47,7 @@ class HabitViewCollection: UICollectionViewCell {
     private let counterLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .systemGray2
+        label.textColor = .black
         label.text = "Счётчик: "
         label.toAutoLayout()
         return label
@@ -56,7 +56,7 @@ class HabitViewCollection: UICollectionViewCell {
     private lazy var counterValueLabel: UILabel = {
        let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .systemGray2
+        label.textColor = .black
         label.toAutoLayout()
         return label
     }()

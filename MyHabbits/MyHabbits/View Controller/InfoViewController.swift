@@ -61,7 +61,6 @@ class InfoViewController: UIViewController {
     }
     
     private func setupViews() {
-        navigationController?.navigationItem.title = "Информация"
         scrollView.toAutoLayout()
         view.addSubview(scrollView)
         scrollView.addSubview(infoView)

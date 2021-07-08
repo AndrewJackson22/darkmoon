@@ -24,6 +24,8 @@ class HabitsViewController: UIViewController {
         UINavigationBar.appearance().scrollEdgeAppearance = apperance
         navigationController?.navigationBar.backgroundColor = .white
         tabBarController?.tabBar.tintColor = UIColor(named: "Purple Color")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "CreateSymbol"), style: .plain, target: self, action: #selector(createButtonTarget))
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Purple Color")
         setupUIView()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +34,13 @@ class HabitsViewController: UIViewController {
         habitsCollection.reloadData()
     }
 
+    @objc func createButtonTarget() {
+        if let habitViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "habitVC") as? HabitViewController {
+            let navigationController = UINavigationController(rootViewController: habitViewController)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.navigationController?.present(navigationController, animated: true, completion: nil)
+        }
+    }
    
     func setupUIView() {
         view.addSubview(habitsCollection)
