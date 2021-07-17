@@ -161,7 +161,6 @@ class HabitViewController: UIViewController {
             timePickerLabel.topAnchor.constraint(equalTo: timeCheckLabel.bottomAnchor, constant: 15),
             timePickerLabel.leadingAnchor.constraint(equalTo: habitsView.leadingAnchor),
             timePickerLabel.trailingAnchor.constraint(equalTo: habitsView.trailingAnchor),
-            timePickerLabel.bottomAnchor.constraint(equalTo: habitsView.bottomAnchor),
             
             deleteButton.topAnchor.constraint(equalTo: timePickerLabel.bottomAnchor, constant: 270),
             deleteButton.centerXAnchor.constraint(equalTo: habitsView.centerXAnchor),
