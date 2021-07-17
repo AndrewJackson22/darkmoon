@@ -116,7 +116,7 @@ class HabitViewController: UIViewController {
         scrollView.toAutoLayout()
         view.addSubview(scrollView)
         scrollView.addSubview(habitsView)
-        habitsView.addSubViews(nameLabel, nameTextField, colorLabel, colorButton, timeLabel, timeTextLabel, timePickerLabel, timeCheckLabel)
+        habitsView.addSubViews(nameLabel, nameTextField, colorLabel, colorButton, timeLabel, timeTextLabel, timePickerLabel, timeCheckLabel, deleteButton)
         
         let constrains = [
             
@@ -157,12 +157,16 @@ class HabitViewController: UIViewController {
             timeTextLabel.trailingAnchor.constraint(equalTo: timeCheckLabel.leadingAnchor, constant: -1),
                         
             timeCheckLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 7),
-            timeCheckLabel.trailingAnchor.constraint(equalTo: habitsView.trailingAnchor, constant: -150),
                         
             timePickerLabel.topAnchor.constraint(equalTo: timeCheckLabel.bottomAnchor, constant: 15),
             timePickerLabel.leadingAnchor.constraint(equalTo: habitsView.leadingAnchor),
             timePickerLabel.trailingAnchor.constraint(equalTo: habitsView.trailingAnchor),
-            timePickerLabel.bottomAnchor.constraint(equalTo: habitsView.bottomAnchor)
+            timePickerLabel.bottomAnchor.constraint(equalTo: habitsView.bottomAnchor),
+            
+            deleteButton.topAnchor.constraint(equalTo: timePickerLabel.bottomAnchor, constant: 270),
+            deleteButton.centerXAnchor.constraint(equalTo: habitsView.centerXAnchor),
+            deleteButton.bottomAnchor.constraint(equalTo: habitsView.bottomAnchor)
+            
         ]
         NSLayoutConstraint.activate(constrains)
     }

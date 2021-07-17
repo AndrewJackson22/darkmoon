@@ -66,7 +66,7 @@ class HabitViewCollection: UICollectionViewCell {
         button.layer.cornerRadius = 19
         button.layer.borderWidth = 3
         button.backgroundColor = .white
-        button.addTarget(self, action: #selector(tapHabitButton), for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: #selector(tapHabitButton), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()

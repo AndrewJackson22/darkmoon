@@ -9,10 +9,20 @@ import UIKit
 
 class HabitDetailViewController: UIViewController {
     
-    var habit: Habit?
+    var habit: Habit
     
     let tableView = UITableView(frame: .zero, style: .grouped)
     let cellID = "cellID"
+    
+    init(habit: Habit){
+        self.habit = habit
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +49,18 @@ class HabitDetailViewController: UIViewController {
     }
     func setupViews() {
         
+        view.addSubview(tableView)
+        tableView.toAutoLayout()
+                
+        let constraints = [
+                    
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ]
+                
+        NSLayoutConstraint.activate(constraints)
     }
     @objc func habitsVC() {
         self.navigationController?.popToRootViewController(animated: true)
@@ -46,12 +68,12 @@ class HabitDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         
-        navigationItem.title = habit?.name
+        navigationItem.title = habit.name
         NotificationCenter.default.addObserver(self, selector: #selector(changeTitle), name: NSNotification.Name(rawValue: "changeTitle"), object: nil)
     }
     
     @objc func changeTitle() {
-        navigationItem.title = habit?.name
+        navigationItem.title = habit.name
     }
     
 }
@@ -84,7 +106,7 @@ extension HabitDetailViewController: UITableViewDataSource {
         
         let selectedHabit = self.habit
         let date = HabitsStore.shared.dates[datesTracked]
-        if HabitsStore.shared.habit(selectedHabit!, isTrackedIn: date) {
+        if HabitsStore.shared.habit(selectedHabit, isTrackedIn: date) {
             cell.accessoryType = .checkmark
         }else {
             cell.accessoryType = .none
