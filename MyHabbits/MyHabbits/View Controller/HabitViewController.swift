@@ -12,7 +12,7 @@ class HabitViewController: UIViewController {
  
     var habit: Habit? {
         didSet{
-            creatHabit()
+            createHabit()
         }
     }
     private let scrollView = UIScrollView()
@@ -107,7 +107,7 @@ class HabitViewController: UIViewController {
         navigationItem.title = "Создать"
         navigationController?.navigationBar.prefersLargeTitles = false
         setupUILabel()
-        creatHabit()
+        createHabit()
         createButton()
     }
     
@@ -187,9 +187,8 @@ class HabitViewController: UIViewController {
     
     func removeHabit() {
         HabitsStore.shared.habits.removeAll {$0 == self.habit }
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ""), object: nil)
     }
-    func creatHabit() {
+    func createHabit() {
         if let changeHabit = habit {
             nameTextField.text = changeHabit.name
             nameTextField.textColor = changeHabit.color
