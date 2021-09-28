@@ -1,0 +1,79 @@
+//
+//  ProgresViewCollection.swift
+//  MyHabbits
+//
+//  Created by Андрей Михайлов on 07.07.2021.
+//
+
+import UIKit
+
+class ProgressViewCollection: UICollectionViewCell {
+    
+    private let progressLabel: UILabel = {
+          let label = UILabel()
+           label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+           label.text = "Всё получится!"
+           label.textColor = .systemGray
+           label.toAutoLayout()
+           return label
+       }()
+       
+       private let progressPercentLabel: UILabel = {
+          let label = UILabel()
+           label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+           label.textColor = .systemGray
+           label.textAlignment = .right
+           label.toAutoLayout()
+           return label
+       }()
+       
+       private let progressBar: UIProgressView = {
+           let progressBar = UIProgressView()
+           progressBar.progressViewStyle = .bar
+           progressBar.trackTintColor = .systemGray2
+           progressBar.progressTintColor = UIColor(named: "Purple Color")
+           progressBar.toAutoLayout()
+           return progressBar
+       }()
+       
+       
+       @available(*, unavailable)
+       required init?(coder: NSCoder) {
+           fatalError("init(coder:) has not been implemented")
+       }
+       
+       override init(frame: CGRect) {
+           super.init(frame: frame)
+           updateProgress()
+           setupViews()
+
+       }
+           
+           func setupViews() {
+           contentView.addSubViews(progressLabel, progressPercentLabel, progressBar)
+           contentView.layer.cornerRadius = 8
+           contentView.backgroundColor = .white
+           
+           let constraints = [
+               
+               progressLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+               progressLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+               progressLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+               
+               progressPercentLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+               progressPercentLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
+               
+               progressBar.topAnchor.constraint(equalTo: progressLabel.bottomAnchor, constant: 10),
+               progressBar.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+               progressBar.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
+               progressBar.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
+           ]
+
+           NSLayoutConstraint.activate(constraints)
+       }
+       
+       func updateProgress() {
+           progressBar.setProgress(HabitsStore.shared.todayProgress, animated: false)
+           progressPercentLabel.text = "\(Int(HabitsStore.shared.todayProgress * 100))%"
+       }
+}
